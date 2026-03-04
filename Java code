@@ -1,0 +1,418 @@
+This is the java code : 
+
+import java.util.Scanner;
+//LADE
+class LADE{
+    Scanner sc=new Scanner(System.in);
+    int fpointL;
+    float ica,tmarks,fmarks;
+    void Lade() {
+        System.out.println("Enter your LADE ICA marks : ");
+        ica=sc.nextFloat();
+        System.out.println("Enter your final term end marks in LADE : ");
+        tmarks=sc.nextFloat();
+        fmarks=(tmarks/2)+ica;
+        System.out.println("Your final marks in LADE is : "+fmarks);
+
+        if(90<=fmarks && fmarks<=100){
+            System.out.println("Your grade is 'O '");
+            fpointL=40;
+        }
+        else if(80<=fmarks && fmarks<=89){
+            System.out.println("Your grade point is 'A+'");
+            fpointL=36;
+        }
+        else if(70<=fmarks && fmarks<=79){
+            System.out.println("Your grade is 'A'");
+            fpointL=32;
+        }
+        else if(60<=fmarks && fmarks<=69){
+            System.out.println("Your grade is 'B+'");
+            fpointL=28;
+        }
+        else if(50<=fmarks && fmarks<=59){
+            System.out.println("Your grade is 'B'");
+            fpointL=24;
+        }
+        else if(45<=fmarks && fmarks<=49){
+            System.out.println("Your grade is 'C'");
+            fpointL=20;
+        }
+        else if(40<=fmarks && fmarks<=44){
+            System.out.println("Your grade is 'P'");
+            fpointL=16;
+        }
+        else{
+            System.out.println("Your failed this course.");
+            fpointL=0;
+        }
+
+
+
+    }
+}
+//QP
+class QP extends LADE{
+    Scanner sc=new Scanner(System.in);
+    int fpointQ;
+    float ica,tmarks,fmarks;
+    void qp() {
+        System.out.println("Enter your QP ICA marks : ");
+        ica=sc.nextFloat();
+        System.out.println("Enter your final term end marks in QP : ");
+        tmarks=sc.nextFloat();
+        fmarks=(tmarks/2)+ica;
+        System.out.println("Your final marks in QP is : "+fmarks);
+
+        if(90<=fmarks && fmarks<=100){
+            System.out.println("Your grade is 'O '");
+            fpointQ=30;
+        }
+        else if(80<=fmarks && fmarks<=89){
+            System.out.println("Your grade point is 'A+'");
+            fpointQ=27;
+        }
+        else if(70<=fmarks && fmarks<=79){
+            System.out.println("Your grade is 'A'");
+            fpointQ=24;
+        }
+        else if(60<=fmarks && fmarks<=69){
+            System.out.println("Your grade is 'B+'");
+            fpointQ=21;
+        }
+        else if(50<=fmarks && fmarks<=59){
+            System.out.println("Your grade is 'B'");
+            fpointQ=18;
+        }
+        else if(45<=fmarks && fmarks<=49){
+            System.out.println("Your grade is 'C'");
+            fpointQ=15;
+        }
+        else if(40<=fmarks && fmarks<=44){
+            System.out.println("Your grade is 'P'");
+            fpointQ=12;
+        }
+        else{
+            System.out.println("Your failed this course.");
+            fpointQ=0;
+        }
+
+
+
+    }
+}
+//BEEE
+class BEEE extends QP{
+    Scanner sc=new Scanner(System.in);
+    int fpointB;
+    float ica,tmarks,fmarks;
+    void beee() {
+        System.out.println("Enter your BEEE ICA marks : ");
+        ica=sc.nextFloat();
+        System.out.println("Enter your final term end marks in BEEE : ");
+        tmarks=sc.nextFloat();
+        fmarks=(tmarks/2)+ica;
+        System.out.println("Your final marks in BEEE is : "+fmarks);
+
+        if(90<=fmarks && fmarks<=100){
+            System.out.println("Your grade is 'O '");
+            fpointB=30;
+        }
+        else if(80<=fmarks && fmarks<=89){
+            System.out.println("Your grade point is 'A+'");
+            fpointB=27;
+        }
+        else if(70<=fmarks && fmarks<=79){
+            System.out.println("Your grade is 'A'");
+            fpointB=24;
+        }
+        else if(60<=fmarks && fmarks<=69){
+            System.out.println("Your grade is 'B+'");
+            fpointB=21;
+        }
+        else if(50<=fmarks && fmarks<=59){
+            System.out.println("Your grade is 'B'");
+            fpointB=18;
+        }
+        else if(45<=fmarks && fmarks<=49){
+            System.out.println("Your grade is 'C'");
+            fpointB=15;
+        }
+        else if(40<=fmarks && fmarks<=44){
+            System.out.println("Your grade is 'P'");
+            fpointB=12;
+        }
+        else{
+            System.out.println("Your failed this course.");
+            fpointB=0;
+        }
+
+
+
+    }
+}
+//WD
+class WD extends BEEE{
+    Scanner sc=new Scanner(System.in);
+    int fpointW;
+    float ica,tmarks,fmarks;
+    void wd() {
+        System.out.println("Enter your WD ICA marks : ");
+        ica=sc.nextFloat();
+        System.out.println("Enter your final exam marks in WD(Out of 50): ");
+        tmarks=sc.nextFloat();
+        fmarks=(tmarks)+ica;
+        System.out.println("Your final marks in WEB DEVELOPMENT is : "+fmarks);
+
+        if(90<=fmarks && fmarks<=100){
+            System.out.println("Your grade is 'O '");
+            fpointW=30;
+        }
+        else if(80<=fmarks && fmarks<=89){
+            System.out.println("Your grade point is 'A+'");
+            fpointW=27;
+        }
+        else if(70<=fmarks && fmarks<=79){
+            System.out.println("Your grade is 'A'");
+            fpointW=24;
+        }
+        else if(60<=fmarks && fmarks<=69){
+            System.out.println("Your grade is 'B+'");
+            fpointW=21;
+        }
+        else if(50<=fmarks && fmarks<=59){
+            System.out.println("Your grade is 'B'");
+            fpointW=18;
+        }
+        else if(45<=fmarks && fmarks<=49){
+            System.out.println("Your grade is 'C'");
+            fpointW=15;
+        }
+        else if(40<=fmarks && fmarks<=44){
+            System.out.println("Your grade is 'P'");
+            fpointW=12;
+        }
+        else{
+            System.out.println("Your failed this course.");
+            fpointW=0;
+        }
+
+
+
+    }
+}
+//PR
+class PR extends WD{
+    int fpointpr;
+    float ica,fica;
+    Scanner sc=new Scanner(System.in);
+    void pr(){
+        System.out.println("We know that IN PR your ICA marks is your final marks ");
+        System.out.println("Hence enter your ICA marks in PR ");
+        ica=sc.nextFloat();
+        fica=ica*2;
+        System.out.println("Your final marks in PR are "+fica);
+        if(90<=fica && fica<=100){
+            System.out.println("Your grade is 'O'");
+            fpointpr=20;
+        }
+        else if(80<=fica && fica<=89){
+            System.out.println("Your grade is 'A+'");
+            fpointpr=18;
+        }
+        else if(70<=fica && fica<=79){
+            System.out.println("Your grade is 'A'");
+            fpointpr=16;
+        }
+        else if(60<=fica && fica<=69){
+            System.out.println("Your grade is 'B+'");
+            fpointpr=14;
+        }
+        else if(50<=fica && fica<=59){
+            System.out.println("Your grade is 'B'");
+            fpointpr=12;
+        }
+        else if(45<=fica && fica<=49){
+            System.out.println("Your grade is 'C'");
+            fpointpr=10;
+        }
+        else if(40<=fica && fica<=44){
+            System.out.println("Your grade is 'P'");
+            fpointpr=8;
+        }
+        else{
+            fpointpr=0;
+        }
+
+    }
+}
+//EC
+class EC extends PR{
+    int fpointec;
+    float ica,fica;
+    Scanner sc=new Scanner(System.in);
+    void ec(){
+        System.out.println("We know that IN EC your ICA marks is your final marks ");
+        System.out.println("Hence enter your ICA marks in EC");
+        ica=sc.nextFloat();
+        fica=ica*2;
+        System.out.println("Your final marks in EC are "+fica);
+        if(90<=fica && fica<=100){
+            System.out.println("Your grade is 'O'");
+            fpointec=10;
+        }
+        else if(80<=fica && fica<=89){
+            System.out.println("Your grade is 'A+'");
+            fpointec=9;
+        }
+        else if(70<=fica && fica<=79){
+            System.out.println("Your grade is 'A'");
+            fpointec=8;
+        }
+        else if(60<=fica && fica<=69){
+            System.out.println("Your grade is 'B+'");
+            fpointec=7;
+        }
+        else if(50<=fica && fica<=59){
+            System.out.println("Your grade is 'B'");
+            fpointec=6;
+        }
+        else if(45<=fica && fica<=49){
+            System.out.println("Your grade is 'C'");
+            fpointec=5;
+        }
+        else if(40<=fica && fica<=44){
+            System.out.println("Your grade is 'P'");
+            fpointec=4;
+        }
+        else{
+            fpointec=0;
+        }
+
+    }
+}
+//OOPLAB
+class OOPLAB extends EC{
+    int fpointooplab;
+    float ica,fica,tmarks;
+    Scanner sc=new Scanner(System.in);
+    void ooplab(){
+        System.out.println("Enter your ICA marks in OOP-LAB ");
+        ica=sc.nextFloat();
+        System.out.println("Enter your Term end marks in OOP-Lab(out of 50)");
+        fica=ica+tmarks;
+        System.out.println("Your final marks in OOP-LAB are "+fica);
+        if(90<=fica&& fica<=100){
+            System.out.println("Your grade is 'O'");
+            fpointooplab=10;
+        }
+        else if(80<=fica && fica<=89){
+            System.out.println("Your grade is 'A+'");
+            fpointooplab=9;
+        }
+        else if(70<=fica && fica<=79){
+            System.out.println("Your grade is 'A'");
+            fpointooplab=8;
+        }
+        else if(60<=fica && fica<=69){
+            System.out.println("Your grade is 'B+'");
+            fpointooplab=7;
+        }
+        else if(50<=fica && fica<=59){
+            System.out.println("Your grade is 'B'");
+            fpointooplab=6;
+        }
+        else if(45<=fica && fica<=49){
+            System.out.println("Your grade is 'C'");
+            fpointooplab=5;
+        }
+        else if(40<=fica && fica<=44){
+            System.out.println("Your grade is 'P'");
+            fpointooplab=4;
+        }
+        else{
+            fpointooplab=0;
+        }
+
+    }
+}
+//OOP
+class OOP extends OOPLAB{
+    Scanner sc=new Scanner(System.in);
+    int fpointoop;
+    float ica,tmarks,fmarks;
+    void oop() {
+        System.out.println("Enter your OOP ICA marks : ");
+        ica=sc.nextFloat();
+        System.out.println("Enter your final term end marks in OOP : ");
+        tmarks=sc.nextFloat();
+        fmarks=(tmarks/2)+ica;
+        System.out.println("Your final marks in OOP is : "+fmarks);
+
+        if(90<=fmarks && fmarks<=100){
+            System.out.println("Your grade is 'O '");
+            fpointoop=20;
+        }
+        else if(80<=fmarks && fmarks<=89){
+            System.out.println("Your grade point is 'A+'");
+            fpointoop=18;
+        }
+        else if(70<=fmarks && fmarks<=79){
+            System.out.println("Your grade is 'A'");
+            fpointoop=16;
+        }
+        else if(60<=fmarks && fmarks<=69){
+            System.out.println("Your grade is 'B+'");
+            fpointoop=14;
+        }
+        else if(50<=fmarks && fmarks<=59){
+            System.out.println("Your grade is 'B'");
+            fpointoop=12;
+        }
+        else if(45<=fmarks && fmarks<=49){
+            System.out.println("Your grade is 'C'");
+            fpointoop=10;
+        }
+        else if(40<=fmarks && fmarks<=44){
+            System.out.println("Your grade is 'P'");
+            fpointoop=8;
+        }
+        else{
+            System.out.println("Your failed this course.");
+            fpointoop=0;
+        }
+
+
+
+    }
+}
+
+class Final extends OOP{
+    int finalpoints;
+    float gpa;
+   void printGPA(){
+       Lade();
+       qp();
+       beee();
+       oop();
+       ooplab();
+       pr();
+       ec();
+       wd();
+
+       finalpoints=(fpointB+fpointQ+fpointL+fpointoop+fpointooplab+fpointpr+fpointW+fpointec);
+       gpa= (float) (finalpoints) /19;
+       System.out.println("Your final GPA of Semester 2 is "+gpa);
+
+
+   }
+}
+public class GPA {
+    public static void main(String[] args) {
+
+        Final f=new Final();
+     f.printGPA();
+
+
+    }
+}
