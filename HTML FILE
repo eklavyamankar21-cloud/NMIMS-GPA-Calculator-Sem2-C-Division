@@ -1,0 +1,207 @@
+This is html file that contains internal css and also js within same file written on a simple notepad.
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Semester 2 GPA Calculator</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#eef2f7;
+display:flex;
+justify-content:center;
+padding:40px;
+}
+
+.container{
+background:white;
+padding:30px;
+width:750px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+h1{
+text-align:center;
+}
+
+.subject{
+border-bottom:1px solid #ddd;
+padding:15px;
+}
+
+input{
+padding:6px;
+margin:5px;
+width:120px;
+}
+
+button{
+margin-top:20px;
+padding:12px 25px;
+background:#2c7be5;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+background:#1a5fcc;
+}
+
+.result{
+font-weight:bold;
+margin-top:5px;
+}
+
+#gpa{
+margin-top:25px;
+font-size:24px;
+text-align:center;
+color:#2c7be5;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Semester 2 GPA Calculator</h1>
+
+<div class="subject">
+<h3>LADE</h3>
+ICA: <input id="lade_ica">
+Term End (out of 100): <input id="lade_te">
+<div class="result" id="lade_res"></div>
+</div>
+
+<div class="subject">
+<h3>Quantum Physics</h3>
+ICA: <input id="qp_ica">
+Term End (out of 100): <input id="qp_te">
+<div class="result" id="qp_res"></div>
+</div>
+
+<div class="subject">
+<h3>BEEE</h3>
+ICA: <input id="beee_ica">
+Term End (out of 100): <input id="beee_te">
+<div class="result" id="beee_res"></div>
+</div>
+
+<div class="subject">
+<h3>OOP</h3>
+ICA: <input id="oop_ica">
+Term End (out of 100): <input id="oop_te">
+<div class="result" id="oop_res"></div>
+</div>
+
+<div class="subject">
+<h3>Web Development</h3>
+ICA: <input id="wd_ica">
+Term End (out of 50): <input id="wd_te">
+<div class="result" id="wd_res"></div>
+</div>
+
+<div class="subject">
+<h3>OOP Lab</h3>
+ICA: <input id="ooplab_ica">
+Term End (out of 50): <input id="ooplab_te">
+<div class="result" id="ooplab_res"></div>
+</div>
+
+<div class="subject">
+<h3>Product Realisation</h3>
+ICA Marks:
+<input id="pr_ica">
+<div class="result" id="pr_res"></div>
+</div>
+
+<div class="subject">
+<h3>English Communication</h3>
+ICA Marks:
+<input id="ec_ica">
+<div class="result" id="ec_res"></div>
+</div>
+
+<button onclick="calculate()">Calculate GPA</button>
+
+<div id="gpa"></div>
+
+</div>
+
+<script>
+
+function gradeInfo(marks){
+
+if(marks>=90) return {grade:"O",gp:10}
+else if(marks>=80) return {grade:"A+",gp:9}
+else if(marks>=70) return {grade:"A",gp:8}
+else if(marks>=60) return {grade:"B+",gp:7}
+else if(marks>=50) return {grade:"B",gp:6}
+else if(marks>=45) return {grade:"C",gp:5}
+else if(marks>=40) return {grade:"P",gp:4}
+else return {grade:"F",gp:0}
+
+}
+
+function calculate(){
+
+let total=0
+
+let lade=(Number(lade_ica.value)+(Number(lade_te.value)/2))
+let l=gradeInfo(lade)
+document.getElementById("lade_res").innerHTML="Final Marks: "+lade+" | Grade: "+l.grade
+total+=l.gp*4
+
+let qp=(Number(qp_ica.value)+(Number(qp_te.value)/2))
+let q=gradeInfo(qp)
+document.getElementById("qp_res").innerHTML="Final Marks: "+qp+" | Grade: "+q.grade
+total+=q.gp*3
+
+let beee=(Number(beee_ica.value)+(Number(beee_te.value)/2))
+let b=gradeInfo(beee)
+document.getElementById("beee_res").innerHTML="Final Marks: "+beee+" | Grade: "+b.grade
+total+=b.gp*3
+
+let oop=(Number(oop_ica.value)+(Number(oop_te.value)/2))
+let o=gradeInfo(oop)
+document.getElementById("oop_res").innerHTML="Final Marks: "+oop+" | Grade: "+o.grade
+total+=o.gp*2
+
+let wd=(Number(wd_ica.value)+Number(wd_te.value))
+let w=gradeInfo(wd)
+document.getElementById("wd_res").innerHTML="Final Marks: "+wd+" | Grade: "+w.grade
+total+=w.gp*3
+
+let ooplab=(Number(ooplab_ica.value)+Number(ooplab_te.value))
+let ol=gradeInfo(ooplab)
+document.getElementById("ooplab_res").innerHTML="Final Marks: "+ooplab+" | Grade: "+ol.grade
+total+=ol.gp*1
+
+let pr=(Number(pr_ica.value)*2)
+let p=gradeInfo(pr)
+document.getElementById("pr_res").innerHTML="Final Marks: "+pr+" | Grade: "+p.grade
+total+=p.gp*2
+
+let ec=(Number(ec_ica.value)*2)
+let e=gradeInfo(ec)
+document.getElementById("ec_res").innerHTML="Final Marks: "+ec+" | Grade: "+e.grade
+total+=e.gp*1
+
+let gpa=total/19
+
+document.getElementById("gpa").innerHTML="Final GPA: "+gpa.toFixed(2)
+
+}
+
+</script>
+
+</body>
+</html>
